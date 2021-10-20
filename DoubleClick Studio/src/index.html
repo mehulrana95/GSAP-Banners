@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>doubleclickstudio</title>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+		<meta name="ad.size" content="width=300,height=250">
+		<link type="text/css" rel="stylesheet" media="screen, projection" href="css/styles.css" />
+		<!-- To use sprite sheet, place images in the sprites folder then -->
+		<!-- add sprite class to element prepending 'icon-' to id - see example below -->
+		<!-- ex. <div id="f1_copy1" class="icon-f1_copy1"></div> -->
+		<!-- Last step, uncomment link below. -->
+		<!-- <link type="text/css" rel="stylesheet" media="screen, projection" href="css/sprite.css" /> -->
+	</head>
+	<body>
+
+		<div id="wrapper">		
+			<div id="logo"></div>
+			<div id="copy">
+				<p>This is a generic banner template.</p>
+			</div>
+			<div id="cta">
+				<h6>CLICK ME</h6>
+			</div>
+			<!-- any elements requiring user interactions should go below the click_through -->
+			<div id="click_through"></div>
+		</div>
+		<script type="text/javascript" src="https://s0.2mdn.net/ads/studio/cached_libs/tweenmax_1.18.0_499ba64a23378545748ff12d372e59e9_min.js"></script>
+		<script type="text/javascript" src="https://s0.2mdn.net/ads/studio/Enabler.js"></script>
+		<script type="text/javascript" src="js/index.js"></script>
+		<script type="text/javascript">
+			window.onload = function() {
+				initBanner();
+			};
+		</script>
+	</body>
+</html>

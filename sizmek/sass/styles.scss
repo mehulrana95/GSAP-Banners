@@ -1,0 +1,102 @@
+@import "compass/reset";
+@import "compass/css3";
+@import "compass/css3/transform";
+// @import "compass/utilities/sprites";
+
+// set all elements to be box-sizing: border box to include any border, padding and content, but not margin.
+*, :before, :after {
+	@include box-sizing(border-box);
+}
+
+// set up variables
+$width: 300px;
+$height: 250px;
+
+// 100% width and height elements that can be positioned easily absolutely
+.abs-pos {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: $width;
+	height: $height;
+	overflow: hidden;
+}
+
+// $retinaWidth: (2 * $width);
+// $retinaHeight: (2 * $height);
+
+// .abs-pos-retina {
+// 	position: absolute;
+// 	width: $retinaWidth;
+// 	height: $retinaHeight;
+// 	overflow: hidden;
+// 	top:-($height/2);
+// 	left:-($width/2);
+// 	-webkit-transform:scale(0.5);
+// 	-moz-transform:scale(0.5);
+// 	-ms-transform:scale(0.5);
+// 	transform:scale(0.5);
+// }
+
+#wrapper {
+	@extend .abs-pos;
+	position: relative;
+	visibility: hidden;
+
+	&.show {
+		visibility: visible;
+	}
+}
+
+#click_through {
+	@extend .abs-pos;
+	cursor: pointer;
+	border: 1px solid #000000;
+}
+
+
+#logo {
+	position: absolute;
+	width: 104px;
+	height: 35px;
+	top: 38%;
+	left: 50%;
+	background: url("../img/logo.png") no-repeat; 
+	@include transform(translate(-50%, -50%));
+}
+#copy {
+	position: absolute;
+	left: 50%;
+	top: 55%;
+	width: 100%;
+
+	p {
+		@include transform(translate(-50%, -50%));
+		text-align: center;
+		width: 100%;
+	}
+}
+
+#cta {
+	position: relative;
+	left: 50%;
+	top: 85%;
+
+	h6 {
+		display: block;
+		@include transform(translate(-50%, -50%));
+		width: 100px;
+		height: 25px;
+		padding-top: 5px;
+		background-color: #f47b23;    
+		color: #fff;
+		font-family: arial;
+		font-size: 12px;
+		font-weight: bold;
+		line-height: 140%;
+		text-align: center;
+    }
+}
+
+
+

@@ -1,0 +1,11 @@
+{
+  "generator-craft-banner": {
+    "publisher": "doubleclick",
+    "bannerName": "300x250",
+    "width": "300",
+    "height": "250",
+    "size": "200",
+    "includeFallbackIE": false,
+    "doubleclickPlatform": "campaignManager"
+  }
+}
